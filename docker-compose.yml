@@ -1,0 +1,11 @@
+# Optional: run MongoDB locally with Docker (skip this if you installed MongoDB or use Atlas)
+services:
+  mongo:
+    image: mongo:7
+    container_name: setu-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - setu-mongo-data:/data/db
+volumes:
+  setu-mongo-data:
